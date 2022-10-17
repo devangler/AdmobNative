@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Admob Native Ad</string>
+
+    <string name="image_here">Image Here</string>
+    <string name="loading_ads">Loading Ads...</string>
+
+</resources>
