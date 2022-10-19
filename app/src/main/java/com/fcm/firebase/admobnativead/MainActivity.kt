@@ -1,6 +1,7 @@
 package com.fcm.firebase.admobnativead
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        binding.showAd.setOnClickListener {
+            val intent = Intent(this@MainActivity, NextActivity::class.java)
+            startActivity(intent)
+            InterstitialManager.showAdmobInterstitial(this@MainActivity)
+        }
 
         if (isInternetConnected(this)) {
             callingNative()

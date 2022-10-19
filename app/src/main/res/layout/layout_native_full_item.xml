@@ -41,6 +41,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -76,9 +77,9 @@
                             android:layout_height="wrap_content"
                             android:isIndicator="true"
                             android:numStars="5"
-                            android:visibility="invisible"
+                            android:stepSize="0.5"
                             android:theme="@style/ratingBar"
-                            android:stepSize="0.5" />
+                            android:visibility="invisible" />
 
                         <TextView
                             android:id="@+id/ad_advertiser"
@@ -146,15 +147,15 @@
             android:layout_below="@+id/ad_media"
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/_30sdp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="@dimen/_30sdp"
             android:layout_marginBottom="5dp"
-            android:visibility="invisible"
             android:background="@drawable/bg_blue_rectangle"
             android:gravity="center"
             android:padding="@dimen/_2sdp"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:visibility="invisible" />
     </RelativeLayout>
 
 

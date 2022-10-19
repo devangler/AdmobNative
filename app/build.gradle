@@ -23,6 +23,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            resValue 'string', 'ads_app_id', '"ca-app-pub-3940256099942544~3347511713"'
+            resValue "string", "splash_interstitial", '"ca-app-pub-3940256099942544/1033173712"'
+            resValue "string", "admob_banner_clock_id", '"ca-app-pub-3940256099942544/6300978111"'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
