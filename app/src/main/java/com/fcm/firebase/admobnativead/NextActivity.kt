@@ -34,7 +34,6 @@ class NextActivity : AppCompatActivity() {
             return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this@NextActivity, adWidth)
         }
 
-
     private fun loadAdmobBanner() {
         adView = AdView(this@NextActivity)
         binding.flAdViewBannerClock.removeAllViews()
@@ -45,6 +44,7 @@ class NextActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().build()
         adView?.loadAd(adRequest)
     }
+
     override fun onPause() {
         adView?.pause()
         super.onPause()

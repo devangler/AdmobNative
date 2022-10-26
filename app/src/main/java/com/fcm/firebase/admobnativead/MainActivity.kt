@@ -13,23 +13,27 @@ import com.fcm.firebase.admobnativead.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private var adsManager: AdsManager? = null
+    private  var adsManager: AdsManager?=null
     lateinit var binding: ActivityMainBinding
-    private var adFrame: FrameLayout? = null
-
+    private  var adFrame: FrameLayout?=null
+    private lateinit  var billing: BillingUtilsIAP
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        billing = BillingUtilsIAP(this@MainActivity)
         binding.showAd.setOnClickListener {
             val intent = Intent(this@MainActivity, NextActivity::class.java)
             startActivity(intent)
             InterstitialManager.showAdmobInterstitial(this@MainActivity)
         }
-
         if (isInternetConnected(this)) {
             callingNative()
+        }
+        binding.premium.setOnClickListener {
+            billing.purchase(this, "android.test.purchased")
+
         }
 
     }

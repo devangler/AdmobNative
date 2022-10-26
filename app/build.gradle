@@ -52,4 +52,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:21.3.0'
     //loti
     implementation "com.airbnb.android:lottie:3.6.1"
+    //billing
+    implementation "com.android.billingclient:billing:4.0.0"
+
+
 }
