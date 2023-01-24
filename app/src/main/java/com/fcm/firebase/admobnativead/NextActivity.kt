@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
 import com.fcm.firebase.admobnativead.databinding.ActivityNextBinding
+import com.google.ads.mediation.admob.AdMobAdapter
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -38,10 +39,12 @@ class NextActivity : AppCompatActivity() {
         adView = AdView(this@NextActivity)
         binding.flAdViewBannerClock.removeAllViews()
         binding.flAdViewBannerClock.addView(adView)
-
         adView?.adUnitId = resources.getString(R.string.admob_banner_clock_id)
         adView?.setAdSize(adSize)
-        val adRequest = AdRequest.Builder().build()
+        val bundle = Bundle().apply {
+            putString("collapsible", "top")
+        }
+        val adRequest = AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter::class.java, bundle).build()
         adView?.loadAd(adRequest)
     }
 

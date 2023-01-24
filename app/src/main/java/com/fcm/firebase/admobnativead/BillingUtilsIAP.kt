@@ -76,7 +76,7 @@ class BillingUtilsIAP constructor(context: Context) {
             purchase.skus.forEach { sku ->
                 val lifetime = if (BuildConfig.DEBUG)
                     "android.test.purchased" else
-                    "com.bigoceanstudio.master.bussiness.card"
+                    "android.test.purchased"
                 if (sku == lifetime) {
                     isPremium.postValue(true)
                     Log.d("Billing_status", isPremium.value.toString())
@@ -122,7 +122,7 @@ class BillingUtilsIAP constructor(context: Context) {
                 val lifetime = if
                                        (BuildConfig.DEBUG)
                     "android.test.purchased" else
-                    "com.bigoceanstudio.master.bussiness.card"
+                    "android.test.purchased"
 
                 if (purchase.skus.contains(lifetime)) {
                     Log.d("Billing_status_old", true.toString())

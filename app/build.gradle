@@ -27,7 +27,7 @@ android {
             minifyEnabled false
             resValue 'string', 'ads_app_id', '"ca-app-pub-3940256099942544~3347511713"'
             resValue "string", "splash_interstitial", '"ca-app-pub-3940256099942544/1033173712"'
-            resValue "string", "admob_banner_clock_id", '"ca-app-pub-3940256099942544/6300978111"'
+            resValue "string", "admob_banner_clock_id", '"ca-app-pub-3940256099942544/2014213617"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -44,16 +44,15 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    //sdp
+    //sdp in size
     implementation 'com.intuit.sdp:sdp-android:1.1.0'
     //ads
     implementation 'com.google.android.gms:play-services-ads:21.3.0'
-    //loti
+    //lotti
     implementation "com.airbnb.android:lottie:3.6.1"
     //billing
-    implementation "com.android.billingclient:billing:4.0.0"
-
+    implementation "com.android.billingclient:billing:5.0.0"
 
 }
