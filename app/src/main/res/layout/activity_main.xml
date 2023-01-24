@@ -12,7 +12,7 @@
         android:id="@+id/showAd"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_40sdp"
-        android:text="ShowInterstitial Ad"
+        android:text="@string/showinterstitial_ad"
         app:cornerRadius="@dimen/_8sdp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:text="Premium"
+        android:text="@string/premium"
         android:textColor="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/premium" />

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -27,7 +29,7 @@ android {
             minifyEnabled false
             resValue 'string', 'ads_app_id', '"ca-app-pub-3940256099942544~3347511713"'
             resValue "string", "splash_interstitial", '"ca-app-pub-3940256099942544/1033173712"'
-            resValue "string", "admob_banner_clock_id", '"ca-app-pub-3940256099942544/2014213617"'
+            resValue "string", "admob_banner_clock_id", '"ca-app-pub-3940256099942544/6300978111"'
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -54,5 +56,8 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.6.1"
     //billing
     implementation "com.android.billingclient:billing:5.0.0"
+    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+    implementation 'com.google.firebase:firebase-config:21.2.0'
 
 }

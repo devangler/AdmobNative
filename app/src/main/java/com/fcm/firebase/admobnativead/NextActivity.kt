@@ -41,10 +41,8 @@ class NextActivity : AppCompatActivity() {
         binding.flAdViewBannerClock.addView(adView)
         adView?.adUnitId = resources.getString(R.string.admob_banner_clock_id)
         adView?.setAdSize(adSize)
-        val bundle = Bundle().apply {
-            putString("collapsible", "top")
-        }
-        val adRequest = AdRequest.Builder().addNetworkExtrasBundle(AdMobAdapter::class.java, bundle).build()
+
+        val adRequest = AdRequest.Builder().build()
         adView?.loadAd(adRequest)
     }
 

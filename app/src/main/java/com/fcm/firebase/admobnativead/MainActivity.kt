@@ -8,15 +8,16 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fcm.firebase.admobnativead.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    private  var adsManager: AdsManager?=null
+    private var adsManager: AdsManager? = null
     lateinit var binding: ActivityMainBinding
-    private  var adFrame: FrameLayout?=null
-    private lateinit  var billing: BillingUtilsIAP
+    private var adFrame: FrameLayout? = null
+    private lateinit var billing: BillingUtilsIAP
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,7 +27,11 @@ class MainActivity : AppCompatActivity() {
         binding.showAd.setOnClickListener {
             val intent = Intent(this@MainActivity, NextActivity::class.java)
             startActivity(intent)
-            InterstitialManager.showAdmobInterstitial(this@MainActivity)
+            if (Constants.splash_inter_config == "1") {
+                InterstitialManager.showAdmobInterstitial(this@MainActivity)
+            }else{
+                Toast.makeText(this, "Ads Off", Toast.LENGTH_SHORT).show()
+            }
         }
         if (isInternetConnected(this)) {
             callingNative()
