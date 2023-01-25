@@ -110,7 +110,7 @@
         <com.google.android.gms.ads.nativead.MediaView
             android:id="@+id/ad_media"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_110sdp"
+            android:layout_height="@dimen/_120sdp"
             android:layout_below="@+id/licon" />
 
         <LinearLayout

@@ -10,12 +10,15 @@
         android:icon="@drawable/ic_aligator"
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_aligator"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/Theme.AdmobNativeAd"
         tools:targetApi="31">
         <activity
+            android:name=".languageActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,9 +30,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Admob Native Ad</string>
+
+    <string name="loading_ads">تحميل الإعلانات …</string>
+    <string name="showinterstitial_ad">عرض إعلان بيني</string>
+    <string name="premium">الممتازة</string>
+    <string name="nextactivity">النشاط التالي</string>
+    <string name="admob_ads_develop_by_kami">AdMob Ads تطوير كامي</string>
+    <string name="language">لغة</string>
+</resources>

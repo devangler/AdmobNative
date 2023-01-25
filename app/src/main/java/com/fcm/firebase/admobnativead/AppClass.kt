@@ -17,4 +17,5 @@ class AppClass : Application() {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
     }
+
 }

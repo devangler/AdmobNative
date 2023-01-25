@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             if (Constants.splash_inter_config == "1") {
                 InterstitialManager.showAdmobInterstitial(this@MainActivity)
-            }else{
+            } else {
                 Toast.makeText(this, "Ads Off", Toast.LENGTH_SHORT).show()
             }
         }
@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.premium.setOnClickListener {
             billing.purchase(this, "android.test.purchased")
+
+        }
+        binding.language.setOnClickListener {
+            val intent = Intent(this, languageActivity::class.java)
+            startActivity(intent)
 
         }
 
